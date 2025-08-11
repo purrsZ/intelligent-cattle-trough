@@ -130,3 +130,7 @@ export const updateTroughTemperature = (ids: string[], minTemp: number, maxTemp:
 - 添加设备分组管理
 - 添加告警规则配置
 - 添加数据导出功能
+
+## 五、实施步骤文档
+
+为便于阶段推进、标记与追踪，“实现思路与步骤（落地执行清单）”已迁移至独立文档：`docs/implementation-steps.md`。
