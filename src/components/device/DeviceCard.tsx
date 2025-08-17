@@ -112,7 +112,7 @@ export const DeviceCard = React.memo<DeviceCardProps>(function DeviceCard({
         </Space>
 
         {/* 设备UUID（调试信息） */}
-        {process.env.NODE_ENV === 'development' && (
+        {/* {process.env.NODE_ENV === 'development' && (
           <Tooltip title={`UUID: ${device.deviceUuid}`}>
             <Text 
               type="secondary" 
@@ -127,7 +127,7 @@ export const DeviceCard = React.memo<DeviceCardProps>(function DeviceCard({
               {device.deviceUuid.slice(-6)}
             </Text>
           </Tooltip>
-        )}
+        )} */}
       </div>
     </Card>
   );
