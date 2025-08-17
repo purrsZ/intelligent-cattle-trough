@@ -53,6 +53,8 @@ export const DeviceCard = React.memo<DeviceCardProps>(function DeviceCard({
         cursor: onToggle ? 'pointer' : 'default',
         border: selected ? '2px solid #1890ff' : '1px solid #d9d9d9',
         backgroundColor: selected ? '#f6ffed' : '#ffffff',
+        boxSizing: 'border-box',
+        padding: selected ? '15px' : '16px', // 补偿边框差异，保持内容区域大小一致
         ...style,
       }}
       onClick={handleToggle}
