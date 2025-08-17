@@ -1,34 +1,24 @@
 /**
- * 饲槽设备状态
+ * 设备相关类型定义
+ * 直接使用新的API类型，不考虑向后兼容
  */
-export type TroughStatus = 'normal' | 'warning' | 'error';
 
-/**
- * 饲槽设备实体
- */
-export interface Trough {
-  id: string;
-  name: string;
-  currentTemperature: number;
-  status: TroughStatus;
-  updatedAt: string;
-}
+// 重新导出新的API类型
+export type {
+  DeviceItem,
+  DeviceGroupItem,
+  QueryDevicesRequest,
+  QueryDevicesResponse,
+  UpdateDeviceConfigRequest,
+  UpdateDeviceConfigResponse,
+  GetDeviceGroupListRequest,
+  GetDeviceGroupListResponse,
+  PaginationData,
+} from './api';
 
-/**
- * 饲槽列表接口响应
- */
-export interface TroughListResponse {
-  list: Trough[];
-  total: number;
-}
-
-/**
- * 批量温度设置请求体
- */
-export interface TemperatureUpdatePayload {
-  troughIds: string[];
-  min: number;
-  max: number;
-}
-
-
+export {
+  AlarmType,
+  AlarmTypeLabels,
+  AlarmTypeColors,
+  PAGINATION,
+} from './enums';

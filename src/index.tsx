@@ -5,23 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { store } from './store';
-// MSW 仅在开发环境启用
-import { worker } from './mocks/browser';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 async function bootstrap() {
-  if (process.env.NODE_ENV === 'development') {
-    await worker.start({ onUnhandledRequest: 'bypass' });
-  }
 
   root.render(
-    <React.StrictMode>
       <Provider store={store}>
         <App />
       </Provider>
-    </React.StrictMode>
   );
 }
 

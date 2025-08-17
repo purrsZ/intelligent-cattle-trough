@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import troughReducer from './troughSlice';
+import deviceReducer from './deviceSlice';
 
 /**
  * 全局 Redux Store
@@ -8,7 +8,7 @@ import troughReducer from './troughSlice';
  */
 export const store = configureStore({
   reducer: {
-    trough: troughReducer,
+    device: deviceReducer,
   },
   // 如需自定义中间件：middleware: (getDefault) => getDefault().concat(customMiddleware)
 });
