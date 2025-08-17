@@ -4,6 +4,7 @@ import { ConfigProvider, App as AntdApp, theme as AntdTheme } from 'antd';
 import MainLayout from './layouts/MainLayout';
 import { LoginPage } from './pages/login';
 import { MonitorPage } from './pages/monitor';
+import { OverviewPage } from './pages/overview';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 
 function App() {
@@ -23,6 +24,14 @@ function App() {
             <Routes>
               <Route path="/login" element={<LoginPage />} />
               <Route
+                path="/overview"
+                element={
+                  <MainLayout>
+                    <OverviewPage />
+                  </MainLayout>
+                }
+              />
+              <Route
                 path="/monitor"
                 element={
                   <MainLayout>
@@ -30,7 +39,7 @@ function App() {
                   </MainLayout>
                 }
               />
-              <Route path="/" element={<Navigate to="/monitor" replace />} />
+              <Route path="/" element={<Navigate to="/overview" replace />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </BrowserRouter>
